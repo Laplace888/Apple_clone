@@ -35,6 +35,7 @@ const searchWrapEl = headerEl.querySelector('.search-wrap')
 const searchStarterEl = headerEl.querySelector('.search-starter')
 const searchCloserEl = searchWrapEl.querySelector('.search-closer')
 const searchShadowEl = searchWrapEl.querySelector('.shadow')
+const searchInputEl = searchWrapEl.querySelector('input')
 const autocompleteEls = [...searchWrapEl.querySelectorAll('li')]
 
 searchStarterEl.addEventListener('click', showSearch)
@@ -48,9 +49,11 @@ function showSearch() {
     el.style.transitionDelay = index * .4 / headerMenuEls.length + 's'
   })
   autocompleteEls.forEach(function (el, index) {
-    el.style.transitionDelay = index * .4 / autocompleteEls.length + 's';
-    el.style.tranform = 'translate(0, 0)';
+    el.style.transitionDelay = index * .4 / autocompleteEls.length + 's'
   })
+  setTimeout(function () {
+    searchInputEl.focus()
+  }, 600)
 }
 function hideSearch() {
   headerEl.classList.remove('searching')
@@ -62,4 +65,5 @@ function hideSearch() {
     el.style.transitionDelay = index * .4 / autocompleteEls.length + 's'
   })
   autocompleteEls.reverse()
+  searchInputEl.value = ''
 }
