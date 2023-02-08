@@ -311,3 +311,19 @@ nav .menu li.active a {
 nav .menu li.active a:hover {
   color: #1D1D1D;
 }
+
+
+/* Hero */
+.hero {}
+.hero .inner {}
+.hero h1 {}
+.hero figure {}
+.hero figure img {}
+.hero figure figcaption {}
+.hero figure figcaption .caption-camera {}
+.hero figure figcaption .caption-chip {}
+.hero figure figcaption .caption-storage {}
+.hero h2 {}
+.hero p.pricing {}
+.hero p.description {}
+.hero .links {}
