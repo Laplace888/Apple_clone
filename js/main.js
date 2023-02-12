@@ -64,5 +64,6 @@ function hideSearch() {
     el.style.transitionDelay = (index * 0.4) / autocompleteEls.length + 's';
   });
   autocompleteEls.reverse();
-  searchInputEl.value = '';
+  searchInputEl.value = 'holiday';
+
 }
