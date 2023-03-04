@@ -2404,6 +2404,9 @@ footer .navigations .map h3 {
   font-size: 12px;
   font-weight: 600;
 }
+footer .navigations .map h3 .icon {
+  display: none;
+}
 footer .navigations .map li {
   margin-top: 12px;
   font-size: 12px;
@@ -2487,9 +2490,18 @@ footer .legal ul li a:hover {
   footer .navigations .map h3 {
     padding: 12px 0;
     font-weight: 400;
+    display: flex;
   }
   footer .navigations .map:hover h3 {
     font-weight: 600;
+  }
+  footer .navigations .map h3 .text {
+    flex-grow: 1;
+  }
+  footer .navigations .map h3 .icon {
+    display: block;
+    padding: 0 10px;
+    color: var(--color-font-darkgray);
   }
   footer .navigations .map ul {
     height: 0;
@@ -2506,6 +2518,13 @@ footer .legal ul li a:hover {
     padding: 6px 0 18px;
     transform: translate(0, 0);
     opacity: 1;
+  }
+  footer .navigations .map.active h3 .icon {
+    transform: scale(1.2) rotate(45deg);
+  }
+  footer .legal ul {
+    flex-wrap: wrap;
+    gap: 6px 21px;
   }
 }
 
